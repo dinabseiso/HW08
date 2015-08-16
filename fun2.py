@@ -4,12 +4,12 @@
 #### Modify the variables so that all of the statements evaluate to True. ####
 ##############################################################################
 
-var1 = 
-var2 = 
-var3 = 
-var4 = 
-var5 = 
-var6 = 
+var1 = 2
+var2 = "pharynx"
+var3 = [1, 2, 3, 4, 5]
+var4 = 1, 1.0, "Hello, Python!"
+var5 = { 'happy' : 7, 'tuna' : 'fish', 'egg': 'salad' } 
+var6 = 2.0
 
 ###############################################
 #### Don't edit anything below this comment ###

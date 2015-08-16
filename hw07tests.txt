@@ -12,8 +12,7 @@
 # 10_02
 
     list_1 = ['apple', ['bear'], 'cat', 'doggy', ['elbow', 'fin', 'garage']]
-    list_2 = [[[['apple']], 'bear', 'cat', 'doggy', 
-             ['elbow','fin','garage','house','indigo']], 'jump']
+    list_2 = [[[['apple']], 'bear', 'cat', 'doggy',['elbow','fin','garage','house','indigo']], 'jump']
     list_3 = []
     list_4 = ["doggy"]
     list_4 = [[[[[[["this"]]]]]]]

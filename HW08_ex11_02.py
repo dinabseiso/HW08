@@ -23,8 +23,6 @@
 
 # Body
 
-pledge_histogram = {}
-
 def histogram_old(s):
     d = dict()
     for c in s:
@@ -35,19 +33,30 @@ def histogram_old(s):
     return d
 
 def histogram_new(s):
-    pass
+    """ The ultimate goal of this function is to tally how many times
+    a word appears in the list of words returned in get_pledge_list().
+    This could be later used to make a nice histogram plot, which tallies
+    the number of occurrences of a given thing."""
+
+    dictionary = {}
+    for c in s:                                     # s is the pledge_list being returned below. For every word in the list...
+        dictionary[c] = dictionary.get(c,0) + 1     # See if c is a key in the empty dictionary. If not, create key c, and set the value to 0.
+    return dictionary                               # If the key has already been added to the dictionary, increment the value by 1. 
 
 def get_pledge_list():
     """ Opens pledge.txt and converts to a list, each item is a word in 
     the order it appears in the original file. returns the list.
     """
-    # Your code here.
-    pass
-    #return pledge_list (uncomment this)
+    with open("pledge.txt", "r") as fin:
+        a = fin.read().replace(',','').replace(".","").replace(":","")
+        pledge_list = a.split()                     # Cuts up the stanzas into a list of words, wherever there was a space (or whatever is designated to split by).
+        return pledge_list
 
 ##############################################################################
-def main():  # DO NOT CHANGE BELOW
+def main():   # DO NOT CHANGE BELOW
     print histogram_new(get_pledge_list())
+
+
 
 if __name__ == '__main__':
     main()
